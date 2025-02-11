@@ -2,7 +2,7 @@ import { Connex } from '@vechain/connex'
 
 declare global {
     interface Window {
-        readonly connex?: any;
+        readonly connex?: Connex;
     }
 }
 
