@@ -2,13 +2,20 @@
 import { useState, useEffect } from 'react'
 import { checkWalletInstalled, connectWallet } from '../utils/wallet'
 
+declare global {
+    interface Window {
+        connex: any;
+    }
+}
+
 export default function WalletConnect() {
-    const [isInstalled, setIsInstalled] = useState(false)
+    const [isInstalled, setIsInstalled] = useState<boolean>(false)
     const [address, setAddress] = useState('')
     const [balance, setBalance] = useState('')
 
     useEffect(() => {
-        setIsInstalled(checkWalletInstalled())
+        const isWalletInstalled = checkWalletInstalled()
+        setIsInstalled(isWalletInstalled)
     }, [])
 
     const handleConnect = async () => {

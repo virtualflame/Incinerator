@@ -8,8 +8,10 @@ interface WalletInfo {
 }
 
 // Function to check if VeWorld wallet is installed
-export const checkWalletInstalled = () => {
-    return typeof window !== 'undefined' && window.connex && window.connex.vendor
+export const checkWalletInstalled = (): boolean => {
+    return typeof window !== 'undefined' && 
+           typeof window.connex !== 'undefined' && 
+           typeof window.connex.vendor !== 'undefined'
 }
 
 // Function to connect wallet
