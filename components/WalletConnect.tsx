@@ -1,12 +1,14 @@
-'use client'
-import { useState, useEffect } from 'react'
-import { checkWalletInstalled, connectWallet } from '../utils/wallet'
+import { Connex } from '@vechain/connex'
 
 declare global {
     interface Window {
-        readonly connex?: any;
+        readonly connex?: Connex;
     }
 }
+
+// Keep all your existing code below this point!
+// Don't delete your component code or other functions
+// Only replace the 'declare global' part at the top
 
 export default function WalletConnect() {
     const [isInstalled, setIsInstalled] = useState<boolean>(false)
