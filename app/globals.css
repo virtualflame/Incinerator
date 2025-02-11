@@ -125,3 +125,42 @@ footer {
   }
 }
 
+/* VeChain Status Styling */
+.vechain-container {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.3);
+  border: 1px solid rgba(255, 87, 34, 0.2);
+}
+
+.vechain-status {
+  color: #fff;
+  text-align: center;
+}
+
+.status-text {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.status-connected {
+  color: #4CAF50;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.status-disconnected {
+  color: #FF5722;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
+}
+
+.block-number {
+  font-family: monospace;
+  color: #FFB74D;
+  margin: 5px 0;
+}
+

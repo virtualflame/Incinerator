@@ -28,26 +28,50 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen p-24">
-      <h1 className="text-4xl font-bold mb-8">VeChain Connection Test</h1>
+    <div className="container">
+      <header>
+        <h1>VFS Incinerator</h1>
+      </header>
       
-      <div className="space-y-4">
-        <p>Connection Status: 
-          <span className={isConnected ? "text-green-500" : "text-red-500"}>
-            {isConnected ? " Connected" : " Not Connected"}
-          </span>
-        </p>
-        
-        {isConnected && (
-          <>
-            <p>Current Block Number: {blockNumber}</p>
-            <div className="mt-8">
+      {/* VeChain Status with updated styling */}
+      <div className="vechain-container">
+        <div className="vechain-status">
+          <p className="status-text">
+            VeChain Status: 
+            <span className={isConnected ? "status-connected" : "status-disconnected"}>
+              {isConnected ? " Connected" : " Not Connected"}
+            </span>
+          </p>
+          {isConnected && (
+            <>
+              <p className="block-number">Block: {blockNumber}</p>
               <WalletConnect />
-            </div>
-          </>
-        )}
+            </>
+          )}
+        </div>
       </div>
-    </main>
+
+      <main>
+        <div className="button-container">
+          <a href="#" className="button flame-button">
+            Burn Now
+          </a>
+          <a href="/mission" className="button">
+            Mission
+          </a>
+          <a href="#" className="button">
+            Vote
+          </a>
+          <a href="#" className="button">
+            Contact
+          </a>
+        </div>
+      </main>
+      
+      <footer>
+        <p>&copy; 2023 VFS Incinerator. All rights reserved.</p>
+      </footer>
+    </div>
   )
 }
 
