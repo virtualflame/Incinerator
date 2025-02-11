@@ -4,7 +4,7 @@ import { checkWalletInstalled, connectWallet } from '../utils/wallet'
 
 declare global {
     interface Window {
-        connex: any;
+        readonly connex?: any;
     }
 }
 
