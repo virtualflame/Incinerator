@@ -33,3 +33,8 @@ next-env.d.ts
 
 # System files
 .DS_Store
+
+# Web3 specific
+.secret
+wallet.json
+.privateKey
